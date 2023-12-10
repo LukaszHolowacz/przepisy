@@ -1,0 +1,35 @@
+.suggestedRecipes {
+    height: 690px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.recipeCard {
+    width: 250px;
+    height: 300px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    flex: 1 1 calc(20% - 15px); 
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ddd;
+    text-align: center;
+}
+
+.recipeCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.recipeCard h3 {
+    color: #131936;
+}
+
+.recipeCard:hover{
+    background-color: #ddd;
+}
