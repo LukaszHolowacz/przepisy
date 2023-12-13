@@ -1,0 +1,56 @@
+.left-panel .user-products{
+    background-color: #131936;
+    color: #ABD5F3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.left-panel td{
+    padding-right: 15px;
+}
+.left-panel h2{
+    margin-top: 0;
+    text-align: center;
+}
+.add-product-form{
+    background-color: #131936;
+    color: #ABD5F3;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.add-product-form input[type="text"],
+.add-product-form select {
+  margin: 10px 0;
+  padding: 10px;
+  border: none; 
+  border-bottom: 2px solid #DFA801; 
+  border-radius: 0; 
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #131936;
+  color: #ABD5F3;
+}
+
+.remove-product-form{
+    background-color: #131936;
+    color: #ABD5F3;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.remove-product-form input[type="text"],
+.remove-product-form select {
+  margin: 10px 0;
+  padding: 10px;
+  border: none; 
+  border-bottom: 2px solid #DFA801; 
+  border-radius: 0; 
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #131936;
+  color: #ABD5F3;
+}

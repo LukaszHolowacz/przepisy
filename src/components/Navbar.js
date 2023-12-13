@@ -15,12 +15,17 @@ function Navbar() {
     navigate('/register');
   };
 
+  const handleNewRecipe = () => {
+    navigate('/addNewRecipe');
+  }
+
   return (
     <div className="navbar">
       <input type="text" placeholder="Szukaj przepisów..." />
       {isLoggedIn ? (
         <div className="user-info">
           <span>{`Witaj ${username}!`}</span>
+          <button onClick={handleNewRecipe}>Dodaj przepis</button>
           <button onClick={logout}>Wyloguj</button>
         </div>
       ) : (

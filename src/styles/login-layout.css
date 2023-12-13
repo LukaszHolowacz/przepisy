@@ -73,7 +73,9 @@
   width: 100%;
   font-weight: bold;
   margin-top: 10px;
-  border: 2px solid #DFA801;
+}
+.login-layout button:hover {
+  background-color: #cc8b01;
 }
 
 .login-layout label {

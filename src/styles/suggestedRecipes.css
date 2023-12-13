@@ -8,7 +8,7 @@
 }
 
 .recipeCard {
-    width: 250px;
+    max-width: 277px;
     height: 300px;
     margin-right: 15px;
     margin-bottom: 15px;
@@ -22,7 +22,7 @@
 
 .recipeCard img {
     max-width: 100%;
-    height: auto;
+    max-height: 190px;
     border-radius: 5px;
 }
 

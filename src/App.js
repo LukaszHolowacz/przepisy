@@ -4,8 +4,8 @@ import MainLayout from './components/MainLayout';
 import RegisterLayout from './components/RegisterLayout';
 import CategoryLayout from './components/CategoryLayout';
 import LoginLayout from './components/LoginLayout';
-import RecipesLayout from './components/RecipesLayout'
 import RecipeLayout from './components/RecipeLayout'
+import NewRecipeLayout from './components/NewRecipeLayout'
 import { AuthProvider } from './context/AuthContext';
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginLayout/>} />
           <Route path="/register" element={<RegisterLayout/>} />
-          <Route path="/recipes" element={<RecipesLayout/>} />
           <Route path="/recipe" element={<RecipeLayout/>} />
           <Route path="/category" element={<CategoryLayout/>} />
+          <Route path="/addNewRecipe" element={<NewRecipeLayout/>} />
           <Route path="/" element={<MainLayout/>} />
         </Routes>
       </AuthProvider>

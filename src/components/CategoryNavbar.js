@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 
 function Navbar() {
     const [categories, setCategories] = useState([]);
@@ -38,13 +37,7 @@ function Navbar() {
             </span>
             <div className='category-buttons'>
                 {categories.map(category => (
-                    <div
-                        key={category.id}
-                        onClick={() => handleCategoryClick(category)}
-                        className="category-card"
-                    >
-                        <h4>{category.name}</h4>
-                    </div>
+                    <button onClick={() => handleCategoryClick(category)} className="category-card">{category.name}</button>
                 ))}
             </div>
         </div>

@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import ImageDisplay from './ImageDisplay';  
 import '../styles/suggestedRecipes.css';
 
 function SuggestedRecipes() {
-  const recipes = [
-    { id: 1, name: "Przepis 1", image: "link_do_obrazka_1" },
-    { id: 2, name: "Przepis 2", image: "link_do_obrazka_2" },
-    { id: 3, name: "Przepis 3", image: "link_do_obrazka_3" },
-    { id: 4, name: "Przepis 4", image: "link_do_obrazka_4" },
-    { id: 5, name: "Przepis 5", image: "link_do_obrazka_5" },
-    { id: 6, name: "Przepis 6", image: "link_do_obrazka_6" },
-    { id: 7, name: "Przepis 7", image: "link_do_obrazka_7" },
-    { id: 8, name: "Przepis 8", image: "link_do_obrazka_8" },
-  ];
+  const navigate = useNavigate();
+  const [selectedRecipe, setRecipe] = useState(null);
+  const [recipes, setRecipes] = useState(null);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/api/recipes')
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.recipes) {
+          setRecipes(data.recipes);
+        } else {
+          console.error('Błąd pobierania przepisów:', data.error);
+        }
+      })
+      .catch((error) => {
+        console.error('Błąd podczas żądania do API:', error);
+      });
+  }, []);
+
+  const handleRecipeClick = (recipe) => {
+    setRecipe(recipe);
+    navigate('/recipe', { state: { selectedRecipe: recipe } });
+  }
 
   return (
     <div className="suggestedRecipes">
-      {recipes.map(recipe => (
-        <div key={recipe.id} className="recipeCard">
-          <img src={recipe.image} alt={recipe.name} />
+      {recipes && recipes.slice(0, 8).map(recipe => (
+        <div key={recipe.id} className="recipeCard" onClick={() => handleRecipeClick(recipe)}>
+          {console.log(recipe.image)}
+          <ImageDisplay buffer={recipe.image} alt={recipe.name} />
           <h3>{recipe.name}</h3>
           <button>❤</button>
         </div>
       ))}
     </div>
-  );
+  );   
 }
 
 export default SuggestedRecipes;

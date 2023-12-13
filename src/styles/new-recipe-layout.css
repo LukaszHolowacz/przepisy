@@ -1,0 +1,88 @@
+.new-recipe-layout {
+    background-color: #ABD5F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.new-recipe-layout .container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #131936;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    color: #ABD5F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-recipe-layout .back-button{
+    color: #ABD5F3;
+    align-self: flex-start;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.new-recipe-layout .back-button:hover{
+    border-bottom: 2px solid #ABD5F3;
+}
+
+.new-recipe-layout input[type="text"],
+.new-recipe-layout input[type="file"],
+.new-recipe-layout select {
+  margin: 10px 0;
+  padding: 10px;
+  border: none; 
+  border-bottom: 2px solid #DFA801; 
+  border-radius: 0; 
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #131936;
+  color: #ABD5F3;
+}
+
+.new-recipe-layout button {
+    background-color: #DFA801;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.new-recipe-layout button:hover{
+    background-color: #cc8b01;
+}
+
+.new-recipe-layout .step-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.new-recipe-layout .product-value {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.new-recipe-layout .product-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.new-recipe-layout .step-buttons button {
+    width: calc(50% - 5px); 
+}
